@@ -1,0 +1,12 @@
+{
+  "name": "dining-meal-booking-feature",
+  "version": "1.0.0",
+  "description": "IS305 Object-Oriented Programming Assessment Task 1 - DWU Dining Meal Booking Feature",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
