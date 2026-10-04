@@ -1,0 +1,11 @@
+{
+  "name": "lab-2-part-2-student-meal-integration",
+  "version": "1.0.0",
+  "description": "Lab 2 Part 2 Student and Meal Booking Integration",
+  "main": "DiningApp.js",
+  "scripts": {
+    "start": "node DiningApp.js"
+  },
+  "author": "Taisen Marainump",
+  "license": "ISC"
+}
