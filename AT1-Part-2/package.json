@@ -1,0 +1,12 @@
+{
+  "name": "at1-part-2-dining-meal-booking",
+  "version": "1.0.0",
+  "description": "AT1 Part 2 Complete Dining Meal Booking Feature",
+  "main": "DiningApp.js",
+  "scripts": {
+    "start": "node DiningApp.js",
+    "test": "printf '2\n' | node DiningApp.js"
+  },
+  "author": "Taisen Marainump",
+  "license": "ISC"
+}
