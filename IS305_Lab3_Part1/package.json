@@ -1,0 +1,13 @@
+{
+  "name": "is305-250692-lab3-part1",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "author": "Taisen Marainump (250692)",
+  "scripts": {
+    "demo": "node Part1Demonstration.js",
+    "demo:rejection": "node Part1Demonstration.js --rejection",
+    "test": "node --test Part1.test.js"
+  },
+  "engines": { "node": ">=22" }
+}
