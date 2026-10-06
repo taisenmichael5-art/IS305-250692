@@ -1,0 +1,32 @@
+✔ default and object constructors; initial balance recorded (1.837697ms)
+✔ encapsulation: returned transaction copies cannot change account history (0.339543ms)
+✔ standard account accepts exact balance and rejects overdraft atomically (0.923666ms)
+✔ deposit and payment accept both simulated overload forms (0.253683ms)
+✔ invalid deposit/payment rejected without mutation: 0 (0.227204ms)
+✔ invalid deposit/payment rejected without mutation: -1 (0.155075ms)
+✔ invalid deposit/payment rejected without mutation: NaN (0.124939ms)
+✔ invalid deposit/payment rejected without mutation: Infinity (0.113552ms)
+✔ invalid deposit/payment rejected without mutation: 10 (0.113651ms)
+✔ invalid deposit/payment rejected without mutation: null (0.195586ms)
+✔ invalid deposit/payment rejected without mutation: 1.001 (0.101964ms)
+✔ invalid deposit/payment rejected without mutation: 1e-8 (0.110928ms)
+✔ rewards deposits record a separate 2% bonus and payment earns no bonus (0.368307ms)
+✔ reward opening balance earns no bonus; rate zero allowed (0.128033ms)
+✔ credit boundary inclusive, rejection atomic, deposit repays debt (0.300775ms)
+✔ invalid construction and configuration rejected (0.325752ms)
+✔ toea arithmetic and half-up bonus rounding (0.179291ms)
+✔ balance ceiling checked before deposit and bonus mutate state (0.16526ms)
+✔ composition connects existing object references to account and receipt (0.452143ms)
+✔ duplicate booking object and reused booking ID cannot charge twice (0.160182ms)
+✔ wrong ownership, duplicate accounts and missing account rejected (0.24475ms)
+✔ failed payment leaves booking unpaid and a later funded retry succeeds (0.14558ms)
+✔ integration dispatches credit policy through the same payment method (0.142275ms)
+✔ missing selectors and invalid booking totals fail before account mutation (0.272993ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.272576
