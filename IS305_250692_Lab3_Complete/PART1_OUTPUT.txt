@@ -1,0 +1,16 @@
+
+=== STANDARD DINING ACCOUNT ===
+Account Number: DA001
+Opening Balance: K1000.00
+Deposit: K500.00
+Meal Payment: K200.00
+Payment successful
+Final Balance: K1300.00
+Payment rejected: Insufficient funds: available K1300.00, required K2000.00.
+
+=== REWARDS DINING ACCOUNT ===
+Account Number: RA001
+Balance Before Reward: K2000.00
+Reward Rate: 2.5%
+Reward Earned: K50.00
+Final Balance: K2050.00

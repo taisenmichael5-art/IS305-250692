@@ -1,0 +1,658 @@
+--- Lab2-Part2/Student.js
++++ Lab3-Complete/Student.js
+@@ -1,14 +1,17 @@
+ /*
+   Program: Lab 2 Part 2 - Student and Meal Booking Integration
+   Student Name: Taisen Marainump
+-  Student ID: 20260001
++  Student ID: 250692
+   Description: Student class used by MealBooking objects.
+ */
++
++const DiningAccount = require("./DiningAccount");
+ 
+ class Student {
+     #studentId;
+     #firstName;
+     #lastName;
++    #diningAccount = null;
+ 
+     constructor(studentId, firstName, lastName) {
+         this.studentId = studentId;
+@@ -49,6 +52,20 @@
+         this.#lastName = String(value).trim();
+     }
+ 
++    assignDiningAccount(account) {
++        if (!(account instanceof DiningAccount)) {
++            throw new TypeError("Assign a valid DiningAccount or one of its subclasses.");
++        }
++        if (this.#diningAccount && this.#diningAccount !== account) {
++            throw new Error("Student already has a dining account; replacement is not allowed.");
++        }
++        this.#diningAccount = account;
++        return account;
++    }
++
++    get diningAccount() { return this.#diningAccount; }
++    getDiningAccount() { return this.#diningAccount; }
++
+     getFullName() {
+         return `${this.#firstName} ${this.#lastName}`;
+     }
+--- Lab2-Part2/MealBooking.js
++++ Lab3-Complete/MealBooking.js
+@@ -1,11 +1,12 @@
+ /*
+   Program: Lab 2 Part 2 - Student and Meal Booking Integration
+   Student Name: Taisen Marainump
+-  Student ID: 20260001
++  Student ID: 250692
+   Description: MealBooking stores a reference to a Student object.
+ */
+ 
+ const Student = require("./Student");
++const DiningAccount = require("./DiningAccount");
+ 
+ class MealBooking {
+     #student;
+@@ -14,6 +15,8 @@
+     #quantity;
+     #dietaryNote;
+     #bookingStatus;
++    #paid = false;
++    #paymentResult = null;
+ 
+     constructor({
+         student,
+@@ -25,7 +28,7 @@
+         this.#student = student;
+         this.#mealDate = mealDate;
+         this.#mealType = mealType;
+-        this.#quantity = Number(quantity);
++        this.#quantity = this.#parseQuantity(quantity);
+         this.#dietaryNote =
+             dietaryNote && String(dietaryNote).trim() !== ""
+                 ? String(dietaryNote).trim()
+@@ -59,20 +62,31 @@
+         return this.#bookingStatus;
+     }
+ 
+-    set mealDate(value) {
+-        this.#mealDate = value;
+-        this.validate();
+-    }
+-
+-    set mealType(value) {
+-        this.#mealType = value;
+-        this.validate();
+-    }
+-
+-    set quantity(value) {
+-        this.#quantity = Number(value);
+-        this.validate();
+-    }
++    #parseQuantity(value) {
++        if (typeof value === "number") return value;
++        if (typeof value === "string" && /^\d+$/.test(value.trim())) return Number(value.trim());
++        return NaN;
++    }
++
++    #updateUnpaidField(field, value) {
++        if (this.#paid) throw new Error("A paid booking's meal details cannot be changed.");
++        if (this.#bookingStatus === "Cancelled") throw new Error("A cancelled booking cannot be changed.");
++        const previous = { date: this.#mealDate, type: this.#mealType, quantity: this.#quantity };
++        if (field === "date") this.#mealDate = value;
++        if (field === "type") this.#mealType = value;
++        if (field === "quantity") this.#quantity = this.#parseQuantity(value);
++        try { this.validate(); }
++        catch (error) {
++            this.#mealDate = previous.date;
++            this.#mealType = previous.type;
++            this.#quantity = previous.quantity;
++            throw error;
++        }
++    }
++
++    set mealDate(value) { this.#updateUnpaidField("date", value); }
++    set mealType(value) { this.#updateUnpaidField("type", value); }
++    set quantity(value) { this.#updateUnpaidField("quantity", value); }
+ 
+     set dietaryNote(value) {
+         this.#dietaryNote =
+@@ -107,7 +121,7 @@
+ 
+         this.#mealType = formattedMealType;
+ 
+-        if (!Number.isInteger(this.#quantity) || this.#quantity < 1) {
++        if (!Number.isSafeInteger(this.#quantity) || this.#quantity < 1) {
+             throw new Error(
+                 "Quantity must be a whole number of 1 or more."
+             );
+@@ -123,16 +137,59 @@
+             Dinner: 20
+         };
+ 
+-        return mealPrices[this.#mealType] * this.#quantity;
+-    }
+-
++        const total = mealPrices[this.#mealType] * this.#quantity;
++        if (!Number.isSafeInteger(total * 100)) throw new RangeError("Booking total exceeds the supported money limit.");
++        return total;
++    }
++
++    get isPaid() { return this.#paid; }
++    get paymentStatus() { return this.#paid ? "Successful" : "Unpaid"; }
++    getPaymentResult() { return this.#paymentResult ? { ...this.#paymentResult } : null; }
++
++    processPayment(diningAccount = this.#student.getDiningAccount()) {
++        const failure = message => {
++            const result = { success: false, message, bookingStatus: this.#bookingStatus };
++            // Keep the last successful receipt after a duplicate-payment rejection.
++            if (!this.#paid) this.#paymentResult = Object.freeze(result);
++            return result;
++        };
++        if (this.#paid || this.#bookingStatus === "Confirmed") {
++            return failure("Payment rejected: this booking has already been paid or confirmed.");
++        }
++        if (this.#bookingStatus === "Cancelled") {
++            return failure("Payment rejected: a cancelled booking cannot be paid.");
++        }
++        this.#bookingStatus = "Pending";
++        if (!(diningAccount instanceof DiningAccount)) {
++            return failure("Payment rejected: assign a valid dining account first.");
++        }
++        if (diningAccount !== this.#student.getDiningAccount()) {
++            return failure("Payment rejected: use this student's assigned dining account.");
++        }
++        try {
++            this.validate();
++            const amount = this.calculateTotal();
++            const description = `${this.#mealType} booking on ${this.#mealDate}`;
++            // One polymorphic call: there is no subtype-specific payment branch.
++            const accepted = diningAccount.payForMeal(amount, description);
++            if (accepted !== true) return failure("Payment rejected by dining account.");
++            this.#paid = true;
++            this.#bookingStatus = "Confirmed";
++            const result = { success: true, message: "Payment successful",
++                amount, accountNumber: diningAccount.getAccountNumber(),
++                remainingBalance: diningAccount.getBalance(), bookingStatus: "Confirmed" };
++            this.#paymentResult = Object.freeze(result);
++            return { ...result };
++        } catch (error) {
++            return failure(`Payment rejected: ${error.message}`);
++        }
++    }
++
++    // Retained Lab 2 API; confirmation now requires a successful payment.
+     confirmBooking() {
+-        if (this.#bookingStatus === "Cancelled") {
+-            throw new Error(
+-                "A cancelled booking cannot be confirmed."
+-            );
+-        }
+-        this.#bookingStatus = "Confirmed";
++        const result = this.processPayment();
++        if (!result.success) throw new Error(result.message);
++        return result;
+     }
+ 
+     cancelBooking() {
+@@ -147,6 +204,7 @@
+ Quantity:      ${this.#quantity}
+ Dietary note:  ${this.#dietaryNote}
+ Status:        ${this.#bookingStatus}
++Payment:       ${this.paymentStatus}
+ Total cost:    K${this.calculateTotal().toFixed(2)}`.trim();
+     }
+ }
+--- Lab2-Part2/DiningApp.js
++++ Lab3-Complete/DiningApp.js
+@@ -1,31 +1,26 @@
+-/*
+-  Program: Lab 2 Part 2 - Student and Meal Booking Integration
+-  Student Name: Taisen Marainump
+-  Student ID: 20260001
+-  Description: Integrates Student and MealBooking objects using
+-  shared object references and JavaScript arrays.
+-*/
+-
+-const readline = require("readline");
++/* IS305 Lab 3 — extends the supplied Lab 2 Part 2 application.
++   Author: Taisen Marainump | Student ID: 250692. In-memory objects and arrays. */
++const readline = require("node:readline");
+ const Student = require("./Student");
+ const MealBooking = require("./MealBooking");
+-
+-// Required JavaScript array. No database is used.
+-const bookings = [];
+-
+-const rl = readline.createInterface({
+-    input: process.stdin,
+-    output: process.stdout
+-});
+-
+-function askQuestion(question) {
+-    return new Promise((resolve) => {
+-        rl.question(question, (answer) => {
+-            resolve(answer.trim());
+-        });
+-    });
+-}
+-
++const DiningAccount = require("./DiningAccount");
++const RewardsDiningAccount = require("./RewardsDiningAccount");
++const CreditDiningAccount = require("./CreditDiningAccount");
++const { runPart1Demonstration, runPart2Demonstration, displayTransactionHistory } = require("./Lab3Demonstrations");
++const bookings = []; // Retained default collection for the original helper API.
++let rl, answers;
++async function askQuestion(question) {
++    process.stdout.write(question);
++    const answer = await answers.next();
++    if (answer.done) throw new Error("Input closed. Application ended.");
++    return answer.value.trim();
++}
++function parseMoney(text, label, allowZero = false) {
++    if (!/^\d+(?:\.\d{1,2})?$/.test(text.trim())) throw new Error(`${label}: enter a non-negative amount with at most two decimals.`);
++    const value = Number(text);
++    if (!Number.isFinite(value) || (!allowZero && value <= 0)) throw new Error(`${label} must be ${allowZero ? "non-negative" : "positive"}.`);
++    return value;
++}
+ // Duplicate = same student ID + meal date + meal type.
+ function isDuplicateBooking(newBooking, bookingArray) {
+     return bookingArray.some((booking) =>
+@@ -96,115 +91,6 @@
+     console.log("========================================");
+ }
+ 
+-async function interactiveApplication() {
+-    console.log("\n========================================");
+-    console.log("    LAB 2 DINING BOOKING APPLICATION");
+-    console.log("========================================");
+-
+-    // 1. Collect student details.
+-    const studentId = await askQuestion("Student ID: ");
+-    const firstName = await askQuestion("First name: ");
+-    const lastName = await askQuestion("Last name: ");
+-
+-    // 2. Create one Student object.
+-    const student = new Student(
+-        studentId,
+-        firstName,
+-        lastName
+-    );
+-
+-    console.log("\nStudent created successfully.");
+-    console.log(student.displayInfo());
+-
+-    let keepAdding = true;
+-
+-    while (keepAdding) {
+-        // 3. Collect meal-booking details.
+-        console.log("\nEnter meal booking details:");
+-        const mealDate = await askQuestion(
+-            "Meal date (YYYY-MM-DD): "
+-        );
+-        const mealType = await askQuestion(
+-            "Meal type (Breakfast/Lunch/Dinner): "
+-        );
+-        const quantity = await askQuestion("Quantity: ");
+-        const dietaryNote = await askQuestion(
+-            "Dietary note (Enter for None): "
+-        );
+-
+-        try {
+-            // 4. Connect the same Student object to MealBooking.
+-            const booking = new MealBooking({
+-                student,
+-                mealDate,
+-                mealType,
+-                quantity,
+-                dietaryNote
+-            });
+-
+-            // 5. Store MealBooking object in array.
+-            addBooking(booking);
+-
+-            const action = await askQuestion(
+-                "Confirm this booking? (y/n): "
+-            );
+-
+-            if (action.toLowerCase() === "y") {
+-                booking.confirmBooking();
+-            }
+-
+-            // 6. Display related student and booking information.
+-            console.log("\n========================================");
+-            console.log("          BOOKING CREATED");
+-            console.log("========================================");
+-            console.log(booking.getSummary());
+-            console.log("========================================");
+-
+-        } catch (error) {
+-            console.log(`\nERROR: ${error.message}`);
+-        }
+-
+-        const again = await askQuestion(
+-            "\nAdd another booking for this student? (y/n): "
+-        );
+-
+-        keepAdding = again.toLowerCase() === "y";
+-    }
+-
+-    // Display complete history.
+-    displayBookingHistory(student, bookings);
+-
+-    // Controlled update demonstration.
+-    const updateName = await askQuestion(
+-        "\nUpdate the student's name? (y/n): "
+-    );
+-
+-    if (updateName.toLowerCase() === "y") {
+-        const newFirstName = await askQuestion(
+-            `New first name (${student.firstName}): `
+-        );
+-        const newLastName = await askQuestion(
+-            `New last name (${student.lastName}): `
+-        );
+-
+-        if (newFirstName !== "") {
+-            student.firstName = newFirstName;
+-        }
+-
+-        if (newLastName !== "") {
+-            student.lastName = newLastName;
+-        }
+-
+-        console.log(
+-            "\nStudent updated. Existing bookings now use the updated name."
+-        );
+-
+-        // The same Student reference is used, so all existing
+-        // booking summaries automatically show the new name.
+-        displayBookingHistory(student, bookings);
+-    }
+-}
+-
+ function runRequiredTests() {
+     console.log("\n========================================");
+     console.log("       LAB 2 PART 2 REQUIRED TESTS");
+@@ -242,6 +128,8 @@
+         "Maria",
+         "Kila"
+     );
++
++    sharedStudent.assignDiningAccount(new DiningAccount("LAB2-TEST", 100));
+ 
+     // TEST 3: Student and booking integration
+     console.log("\nTEST 3 - STUDENT AND BOOKING INTEGRATION");
+@@ -333,39 +221,207 @@
+     }
+ }
+ 
++
++class DiningApp {
++    #students = [];
++    #bookings = [];
++
++    getStudents() { return [...this.#students]; }
++    getBookings() { return [...this.#bookings]; }
++    findStudent(id) {
++        return this.#students.find(student => student.studentId.toLowerCase() === String(id).trim().toLowerCase());
++    }
++    registerStudent(student) {
++        if (!(student instanceof Student)) throw new Error("A valid Student object is required.");
++        if (this.findStudent(student.studentId)) throw new Error("Student ID already exists.");
++        if (student.diningAccount && this.#students.some(other => other.diningAccount &&
++            other.diningAccount.getAccountNumber().toLowerCase() === student.diningAccount.getAccountNumber().toLowerCase())) {
++            throw new Error("Account number is already assigned to another student.");
++        }
++        this.#students.push(student);
++        return student;
++    }
++    assignAccount(student, account) {
++        if (!this.#students.includes(student)) throw new Error("Register this Student object first.");
++        if (!(account instanceof DiningAccount)) throw new Error("A valid dining account is required.");
++        const duplicate = this.#students.some(other => other !== student && other.diningAccount &&
++            other.diningAccount.getAccountNumber().toLowerCase() === account.getAccountNumber().toLowerCase());
++        if (duplicate) throw new Error("Account number is already assigned to another student.");
++        return student.assignDiningAccount(account);
++    }
++    addBooking(booking) {
++        if (!(booking instanceof MealBooking) || !this.#students.includes(booking.student)) {
++            throw new Error("Booking must refer to a registered Student object.");
++        }
++        addBooking(booking, this.#bookings); // Retains Lab 2 duplicate rule.
++        return booking;
++    }
++    bookAndPay(student, details) {
++        const booking = new MealBooking({ ...details, student });
++        this.addBooking(booking); // Validate duplicate first; rejected payment leaves this Pending.
++        const result = booking.processPayment(student.getDiningAccount());
++        return { booking, result };
++    }
++    printHistory(student) { displayBookingHistory(student, this.#bookings); }
++
++    async interactiveApplication() {
++        console.log("\n=== STUDENT DINING ACCOUNT AND MEAL BOOKING ===");
++        const studentId = await askQuestion("Student ID: ");
++        const firstName = await askQuestion("First name: ");
++        const lastName = await askQuestion("Last name: ");
++        const student = new Student(studentId, firstName, lastName);
++        console.log(student.displayInfo());
++        console.log("Account types: 1 Standard | 2 Rewards | 3 Credit");
++        const type = await askQuestion("Choose account type (1-3): ");
++        const number = await askQuestion("Account number: ");
++        const opening = parseMoney(await askQuestion("Opening balance (kina): "), "Opening balance", true);
++        let account;
++        if (type === "1") account = new DiningAccount(number, opening);
++        else if (type === "2") {
++            const rate = parseMoney(await askQuestion("Reward rate percent (e.g. 2.5): "), "Reward rate", true);
++            account = new RewardsDiningAccount(number, opening, rate);
++        } else if (type === "3") {
++            const limit = parseMoney(await askQuestion("Credit limit (kina): "), "Credit limit", true);
++            account = new CreditDiningAccount(number, opening, limit);
++        } else throw new Error("Choose account type 1, 2 or 3.");
++        student.assignDiningAccount(account);
++        this.registerStudent(student);
++        account.displayAccountSummary();
++        let again = true;
++        while (again) {
++            console.log("\nEnter meal booking details:");
++            const mealDate = await askQuestion("Meal date (YYYY-MM-DD): ");
++            const mealType = await askQuestion("Meal type (Breakfast/Lunch/Dinner): ");
++            const quantity = await askQuestion("Quantity: ");
++            const dietaryNote = await askQuestion("Dietary note (Enter for None): ");
++            try {
++                const booking = new MealBooking({ student, mealDate, mealType, quantity, dietaryNote });
++                this.addBooking(booking);
++                const pay = await askQuestion("Pay and confirm this booking? (y/n): ");
++                if (pay.toLowerCase() === "y") {
++                    const result = booking.processPayment(account);
++                    console.log(result.message);
++                }
++                console.log(booking.getSummary());
++                console.log(`Remaining Balance: K${account.getBalance().toFixed(2)}`);
++            } catch (error) { console.log(`ERROR: ${error.message}`); }
++            again = (await askQuestion("Add another booking for this student? (y/n): ")).toLowerCase() === "y";
++        }
++        this.printHistory(student);
++        displayTransactionHistory(account);
++        if ((await askQuestion("Update the student's name? (y/n): ")).toLowerCase() === "y") {
++            const first = await askQuestion(`New first name (${student.firstName}): `);
++            const last = await askQuestion(`New last name (${student.lastName}): `);
++            if (first) student.firstName = first;
++            if (last) student.lastName = last;
++            console.log("Existing bookings use the updated Student name.");
++            this.printHistory(student);
++        }
++    }
++
++    async selectStudent() {
++        const id = await askQuestion("Student ID: ");
++        const student = this.findStudent(id);
++        if (!student) throw new Error("Student not found. Create the student using option 1.");
++        return student;
++    }
++    async selectBooking(student) {
++        const list = this.#bookings.filter(booking => booking.student === student);
++        if (!list.length) throw new Error("No bookings for this student.");
++        list.forEach((booking, index) => console.log(`${index + 1}. ${booking.mealType} / ${booking.mealDate} / ${booking.bookingStatus} / K${booking.calculateTotal().toFixed(2)}`));
++        const input = await askQuestion("Booking number: ");
++        if (!/^\d+$/.test(input)) throw new Error("Enter a whole-number booking selection.");
++        const booking = list[Number(input) - 1];
++        if (!booking) throw new Error("Invalid booking selection.");
++        return booking;
++    }
++    async accountAction(choice) {
++        const student = await this.selectStudent();
++        const account = student.getDiningAccount();
++        if (!account) throw new Error("This student has no dining account.");
++        if (choice === "6") {
++            const amount = parseMoney(await askQuestion("Deposit amount (kina): "), "Deposit");
++            const note = await askQuestion("Description (Enter for default): ");
++            if (note) account.deposit(amount, note); else account.deposit(amount);
++            account.displayAccountSummary();
++        } else if (choice === "7") {
++            const booking = await this.selectBooking(student);
++            console.log(booking.processPayment(account).message);
++            console.log(booking.getSummary());
++        } else if (choice === "8") {
++            if (!(account instanceof RewardsDiningAccount)) throw new Error("Only a rewards account can apply a reward.");
++            console.log(`Reward earned: K${account.calculateReward().toFixed(2)}`);
++            account.applyReward(); account.displayAccountSummary();
++        } else if (choice === "9") {
++            this.printHistory(student); account.displayAccountSummary(); displayTransactionHistory(account);
++        } else if (choice === "10") {
++            const booking = await this.selectBooking(student); booking.cancelBooking();
++            console.log("Booking cancelled. Any previous payment remains recorded; automatic refunds are not implemented.");
++        } else if (choice === "11") {
++            const booking = await this.selectBooking(student);
++            if (booking.isPaid || booking.bookingStatus === "Cancelled") throw new Error("Only Pending unpaid bookings can be updated.");
++            const field = await askQuestion("Change 1 date, 2 meal type, 3 quantity, 4 dietary note: ");
++            const value = await askQuestion("New value: ");
++            const details = { student, mealDate: booking.mealDate, mealType: booking.mealType,
++                quantity: booking.quantity, dietaryNote: booking.dietaryNote };
++            if (field === "1") details.mealDate = value;
++            else if (field === "2") details.mealType = value;
++            else if (field === "3") details.quantity = value;
++            else if (field === "4") details.dietaryNote = value;
++            else throw new Error("Invalid field choice.");
++            const candidate = new MealBooking(details);
++            if (isDuplicateBooking(candidate, this.#bookings.filter(other => other !== booking))) {
++                throw new Error("Update rejected: duplicate booking.");
++            }
++            if (field === "1") booking.mealDate = candidate.mealDate;
++            if (field === "2") booking.mealType = candidate.mealType;
++            if (field === "3") booking.quantity = candidate.quantity;
++            if (field === "4") booking.dietaryNote = candidate.dietaryNote;
++            console.log(booking.getSummary());
++        }
++    }
++}
++
+ async function main() {
+-    try {
+-        console.log("========================================");
+-        console.log(" LAB 2 - STUDENT & MEAL BOOKING SYSTEM");
+-        console.log("========================================");
+-        console.log("1. Run interactive application");
+-        console.log("2. Run required tests");
+-        console.log("3. Exit");
+-
+-        const choice = await askQuestion(
+-            "\nChoose an option (1-3): "
+-        );
+-
+-        if (choice === "1") {
+-            await interactiveApplication();
+-        } else if (choice === "2") {
+-            runRequiredTests();
+-        } else if (choice === "3") {
+-            console.log("\nApplication closed.");
+-        } else {
+-            console.log("\nERROR: Invalid menu option.");
+-        }
+-    } catch (error) {
+-        console.log(`\nERROR: ${error.message}`);
+-    } finally {
+-        rl.close();
+-    }
+-}
+-
+-main();
+-
+-module.exports = {
+-    displayBookingHistory,
+-    addBooking,
+-    isDuplicateBooking
+-};
++    rl = readline.createInterface({ input: process.stdin, output: process.stdout });
++    answers = rl[Symbol.asyncIterator]();
++    const app = new DiningApp();
++    try {
++        while (true) {
++            console.log("\n=== DWU DINING — LAB 3 DISTINCTION EXTENSION ===");
++            console.log("1. Student and meal-booking application");
++            console.log("2. Retained Lab 2 tests (with payment confirmation)");
++            console.log("3. Exit");
++            console.log("4. Required Part 1 account demonstrations");
++            console.log("5. Required Part 2 demonstrations");
++            console.log("6. Deposit funds");
++            console.log("7. Pay / retry a Pending booking");
++            console.log("8. Calculate and apply a reward");
++            console.log("9. View account, bookings and transactions");
++            console.log("10. Cancel a booking");
++            console.log("11. Update a Pending booking");
++            const choice = await askQuestion("Choose an option (1-11): ");
++            if (choice === "3") { console.log("Application closed."); break; }
++            try {
++                if (choice === "1") await app.interactiveApplication();
++                else if (choice === "2") runRequiredTests();
++                else if (choice === "4") runPart1Demonstration();
++                else if (choice === "5") runPart2Demonstration();
++                else if (["6", "7", "8", "9", "10", "11"].includes(choice)) await app.accountAction(choice);
++                else console.log("ERROR: Invalid menu option.");
++            } catch (error) {
++                if (error.message.startsWith("Input closed")) throw error;
++                console.log(`ERROR: ${error.message}`);
++            }
++        }
++    } catch (error) { console.log(error.message); }
++    finally { rl.close(); }
++}
++
++if (require.main === module) {
++    if (process.argv.includes("--part1")) runPart1Demonstration();
++    else if (process.argv.includes("--demo")) runPart2Demonstration();
++    else if (process.argv.includes("--lab2-tests")) runRequiredTests();
++    else main();
++}
++module.exports = { DiningApp, displayBookingHistory, addBooking, isDuplicateBooking, runRequiredTests, main };
+--- Lab2-Part2/package.json
++++ Lab3-Complete/package.json
+@@ -1,11 +1,18 @@
+ {
+-  "name": "lab-2-part-2-student-meal-integration",
+-  "version": "1.0.0",
+-  "description": "Lab 2 Part 2 Student and Meal Booking Integration",
++  "name": "is305-250692-lab3-complete",
++  "version": "3.0.0",
++  "private": true,
++  "description": "Lab 3 distinction extension of the supplied Lab 2 Student and MealBooking application",
+   "main": "DiningApp.js",
++  "type": "commonjs",
+   "scripts": {
+-    "start": "node DiningApp.js"
++    "start": "node DiningApp.js",
++    "demo:part1": "node DiningApp.js --part1",
++    "demo:part2": "node DiningApp.js --demo",
++    "test:lab2": "node DiningApp.js --lab2-tests",
++    "test": "node --test tests/*.test.js"
+   },
+-  "author": "Taisen Marainump",
+-  "license": "ISC"
++  "author": "Taisen Marainump (250692)",
++  "license": "ISC",
++  "engines": { "node": ">=22" }
+ }
