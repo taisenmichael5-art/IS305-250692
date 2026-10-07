@@ -1,0 +1,5 @@
+node_modules/
+*.tmp
+data/.pending-save.json
+data/practice*/
+.DS_Store

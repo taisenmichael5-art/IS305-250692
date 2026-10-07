@@ -1,0 +1,11 @@
+
+CAMPUS SERVICE REQUEST SYSTEM — PASS DEMONSTRATION
+┌─────────┬──────────┬───────────────────────────┬──────────┬─────────────┬───────┬─────────────┐
+│ (index) │ ID       │ Category                  │ Priority │ Status      │ Score │ TargetHours │
+├─────────┼──────────┼───────────────────────────┼──────────┼─────────────┼───────┼─────────────┤
+│ 0       │ 'REQ001' │ 'ICT Support'             │ 'High'   │ 'Submitted' │ 60    │ 24          │
+│ 1       │ 'REQ002' │ 'Facilities Maintenance'  │ 'Normal' │ 'Submitted' │ 30    │ 72          │
+│ 2       │ 'REQ003' │ 'Cleaning and Sanitation' │ 'High'   │ 'Submitted' │ 60    │ 24          │
+│ 3       │ 'REQ004' │ 'General Campus Service'  │ 'Low'    │ 'Submitted' │ 10    │ 120         │
+└─────────┴──────────┴───────────────────────────┴──────────┴─────────────┴───────┴─────────────┘
+Status summary: { Submitted: 3, Cancelled: 1 }

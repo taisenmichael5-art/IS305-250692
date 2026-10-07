@@ -1,0 +1,76 @@
+[
+  {
+    "requestId": "REQ001",
+    "requesterId": "250692",
+    "title": "Lab computer cannot access network",
+    "description": "Network unavailable on lab workstation.",
+    "campusLocation": "LAB 131",
+    "category": "ICT Support",
+    "priority": "Urgent",
+    "status": "Closed",
+    "dateSubmitted": "2026-10-06T15:40:29.226Z",
+    "dateUpdated": "2026-10-06T15:40:29.266Z",
+    "specialisedData": {
+      "deviceType": "Desktop",
+      "systemName": "Windows workstation",
+      "faultType": "No network connectivity",
+      "networkImpact": "Multiple Users"
+    },
+    "requestType": "ICTSupportRequest",
+    "assignedTechnicianId": "TECH001"
+  },
+  {
+    "requestId": "REQ002",
+    "requesterId": "STF001",
+    "title": "Damaged classroom door handle",
+    "description": "Door handle loose and difficult to operate.",
+    "campusLocation": "Teaching Block Room 2",
+    "category": "Facilities Maintenance",
+    "priority": "Normal",
+    "status": "Submitted",
+    "dateSubmitted": "2026-10-06T15:40:29.227Z",
+    "dateUpdated": "2026-10-06T15:40:29.227Z",
+    "specialisedData": {
+      "building": "Teaching Block",
+      "roomNumber": "2",
+      "hazardLevel": "Medium",
+      "equipmentAffected": "Door handle"
+    },
+    "requestType": "MaintenanceRequest",
+    "assignedTechnicianId": null
+  },
+  {
+    "requestId": "REQ003",
+    "requesterId": "250692",
+    "title": "Clean washroom spill",
+    "description": "Washroom floor needs cleaning.",
+    "campusLocation": "Student washroom",
+    "category": "Cleaning and Sanitation",
+    "priority": "High",
+    "status": "Submitted",
+    "dateSubmitted": "2026-10-06T15:40:29.227Z",
+    "dateUpdated": "2026-10-06T15:40:29.227Z",
+    "specialisedData": {
+      "cleaningArea": "Washroom floor",
+      "hygieneRisk": "High",
+      "serviceType": "Spill cleaning",
+      "preferredServiceTime": "As soon as available"
+    },
+    "requestType": "CleaningRequest",
+    "assignedTechnicianId": null
+  },
+  {
+    "requestId": "REQ004",
+    "requesterId": "250692",
+    "title": "Request event table setup",
+    "description": "Set up tables for a student programme.",
+    "campusLocation": "Student hall",
+    "category": "General Campus Service",
+    "priority": "Low",
+    "status": "Submitted",
+    "dateSubmitted": "2026-10-06T15:40:29.227Z",
+    "dateUpdated": "2026-10-06T15:40:29.227Z",
+    "requestType": "GeneralServiceRequest",
+    "assignedTechnicianId": null
+  }
+]

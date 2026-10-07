@@ -1,0 +1,24 @@
+{
+  "name": "is305-250692-at3-distinction",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "CampusServiceApp.js",
+  "description": "Progressive Pass, Credit and Distinction campus service request console system",
+  "author": "Taisen Marainump (250692)",
+  "scripts": {
+    "start": "node CampusServiceApp.js",
+    "start:pass": "node CampusServiceApp.js --level=pass",
+    "start:credit": "node CampusServiceApp.js --level=credit",
+    "start:demo-data": "node CampusServiceApp.js --seed-demo",
+    "demo:pass": "node CampusServiceApp.js --level=pass --demo",
+    "demo:credit": "node CampusServiceApp.js --level=credit --demo",
+    "demo:distinction": "node CampusServiceApp.js --demo",
+    "test": "node --test tests/*.test.js",
+    "demo": "node CampusServiceApp.js --demo",
+    "test:distinction": "node --test tests/distinction.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

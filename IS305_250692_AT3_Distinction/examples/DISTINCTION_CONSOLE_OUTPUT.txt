@@ -1,0 +1,789 @@
+Demo IDs: 250692, STF001, OFF001, TECH001, TECH002, ADM001. Select option 11 to switch.
+Campus Service Request System | Taisen Marainump 250692
+Mode: distinction. Role selection is an academic simulation, not password authentication.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: No user selected
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: ┌─────────┬───────────┬────────────────────┬────────────────────────┐
+│ (index) │ ID        │ Name               │ Role                   │
+├─────────┼───────────┼────────────────────┼────────────────────────┤
+│ 0       │ '250692'  │ 'Taisen Marainump' │ 'Student'              │
+│ 1       │ 'STF001'  │ 'Maria Kila'       │ 'Staff'                │
+│ 2       │ 'OFF001'  │ 'Peter Wari'       │ 'Service Officer'      │
+│ 3       │ 'TECH001' │ 'Anna Malo'        │ 'Technician'           │
+│ 4       │ 'TECH002' │ 'John Kora'        │ 'Technician'           │
+│ 5       │ 'ADM001'  │ 'Lucy Tari'        │ 'System Administrator' │
+└─────────┴───────────┴────────────────────┴────────────────────────┘
+Switch to user ID: Active user: OFF001 | Peter Wari | Service Officer | officer@example.test | Section: Campus Services
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Request ID: Review comment: Action accepted. Status: Reviewed
+Changes saved to JSON.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Request ID: 1. Low
+2. Normal
+3. High
+4. Urgent
+Priority: Priority comment: Action accepted. Status: Reviewed
+Changes saved to JSON.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Request ID: ┌─────────┬───────────┬─────────────┬───────────────────────────┐
+│ (index) │ ID        │ Name        │ Speciality                │
+├─────────┼───────────┼─────────────┼───────────────────────────┤
+│ 0       │ 'TECH001' │ 'Anna Malo' │ 'ICT Support'             │
+│ 1       │ 'TECH002' │ 'John Kora' │ 'Facilities and Cleaning' │
+└─────────┴───────────┴─────────────┴───────────────────────────┘
+Technician ID: Assignment comment: Action accepted. Status: Assigned
+Changes saved to JSON.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: ┌─────────┬───────────┬────────────────────┬────────────────────────┐
+│ (index) │ ID        │ Name               │ Role                   │
+├─────────┼───────────┼────────────────────┼────────────────────────┤
+│ 0       │ '250692'  │ 'Taisen Marainump' │ 'Student'              │
+│ 1       │ 'STF001'  │ 'Maria Kila'       │ 'Staff'                │
+│ 2       │ 'OFF001'  │ 'Peter Wari'       │ 'Service Officer'      │
+│ 3       │ 'TECH001' │ 'Anna Malo'        │ 'Technician'           │
+│ 4       │ 'TECH002' │ 'John Kora'        │ 'Technician'           │
+│ 5       │ 'ADM001'  │ 'Lucy Tari'        │ 'System Administrator' │
+└─────────┴───────────┴────────────────────┴────────────────────────┘
+Switch to user ID: Active user: TECH001 | Anna Malo | Technician | ict@example.test | Speciality: ICT Support
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Request ID: Start-work comment: Action accepted. Status: In Progress
+Changes saved to JSON.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Request ID: Progress note: Action accepted. Status: In Progress
+Changes saved to JSON.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Request ID: Resolution comment: Action accepted. Status: Resolved
+Changes saved to JSON.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: ┌─────────┬───────────┬────────────────────┬────────────────────────┐
+│ (index) │ ID        │ Name               │ Role                   │
+├─────────┼───────────┼────────────────────┼────────────────────────┤
+│ 0       │ '250692'  │ 'Taisen Marainump' │ 'Student'              │
+│ 1       │ 'STF001'  │ 'Maria Kila'       │ 'Staff'                │
+│ 2       │ 'OFF001'  │ 'Peter Wari'       │ 'Service Officer'      │
+│ 3       │ 'TECH001' │ 'Anna Malo'        │ 'Technician'           │
+│ 4       │ 'TECH002' │ 'John Kora'        │ 'Technician'           │
+│ 5       │ 'ADM001'  │ 'Lucy Tari'        │ 'System Administrator' │
+└─────────┴───────────┴────────────────────┴────────────────────────┘
+Switch to user ID: Active user: OFF001 | Peter Wari | Service Officer | officer@example.test | Section: Campus Services
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Request ID: Verification comment: Action accepted. Status: Closed
+Changes saved to JSON.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: ┌─────────┬───────────┬────────────────────┬────────────────────────┐
+│ (index) │ ID        │ Name               │ Role                   │
+├─────────┼───────────┼────────────────────┼────────────────────────┤
+│ 0       │ '250692'  │ 'Taisen Marainump' │ 'Student'              │
+│ 1       │ 'STF001'  │ 'Maria Kila'       │ 'Staff'                │
+│ 2       │ 'OFF001'  │ 'Peter Wari'       │ 'Service Officer'      │
+│ 3       │ 'TECH001' │ 'Anna Malo'        │ 'Technician'           │
+│ 4       │ 'TECH002' │ 'John Kora'        │ 'Technician'           │
+│ 5       │ 'ADM001'  │ 'Lucy Tari'        │ 'System Administrator' │
+└─────────┴───────────┴────────────────────┴────────────────────────┘
+Switch to user ID: Active user: ADM001 | Lucy Tari | System Administrator | admin@example.test
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: ADM001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: JSON saved.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: ADM001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Type RELOAD to replace this session with saved JSON: JSON reloaded; subclasses and shared user references restored.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: ADM001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: {
+  "report": "Management Summary",
+  "total": 4,
+  "byStatus": {
+    "Submitted": 3,
+    "Reviewed": 0,
+    "Assigned": 0,
+    "In Progress": 0,
+    "Resolved": 0,
+    "Closed": 1,
+    "Cancelled": 0
+  },
+  "byCategory": {
+    "ICT Support": 1,
+    "Facilities Maintenance": 1,
+    "Cleaning and Sanitation": 1,
+    "General Campus Service": 1
+  },
+  "byPriority": {
+    "Low": 1,
+    "Normal": 1,
+    "High": 1,
+    "Urgent": 1
+  },
+  "open": 3,
+  "technicianWorkload": {}
+}
+{
+  "report": "Resolution Targets",
+  "note": "Targets are illustrative academic assumptions, not DWU service commitments.",
+  "rows": [
+    {
+      "requestId": "REQ001",
+      "status": "Closed",
+      "targetHours": 8,
+      "elapsedHours": 0,
+      "outcome": "Resolved within target"
+    },
+    {
+      "requestId": "REQ002",
+      "status": "Submitted",
+      "targetHours": 72,
+      "elapsedHours": 0,
+      "outcome": "Open within target"
+    },
+    {
+      "requestId": "REQ003",
+      "status": "Submitted",
+      "targetHours": 12,
+      "elapsedHours": 0,
+      "outcome": "Open within target"
+    },
+    {
+      "requestId": "REQ004",
+      "status": "Submitted",
+      "targetHours": 120,
+      "elapsedHours": 0,
+      "outcome": "Open within target"
+    }
+  ]
+}
+{
+  "report": "Polymorphic Priority Queue",
+  "rows": [
+    {
+      "requestId": "REQ003",
+      "requester": "Taisen Marainump",
+      "requesterId": "250692",
+      "title": "Clean washroom spill",
+      "category": "Cleaning and Sanitation",
+      "priority": "High",
+      "status": "Submitted",
+      "campusLocation": "Student washroom",
+      "technicianId": "Unassigned",
+      "dateSubmitted": "2026-10-06T15:40:29.227Z",
+      "score": 85,
+      "targetHours": 12,
+      "requestType": "CleaningRequest",
+      "cleaningArea": "Washroom floor",
+      "hygieneRisk": "High",
+      "serviceType": "Spill cleaning",
+      "preferredServiceTime": "As soon as available"
+    },
+    {
+      "requestId": "REQ002",
+      "requester": "Maria Kila",
+      "requesterId": "STF001",
+      "title": "Damaged classroom door handle",
+      "category": "Facilities Maintenance",
+      "priority": "Normal",
+      "status": "Submitted",
+      "campusLocation": "Teaching Block Room 2",
+      "technicianId": "Unassigned",
+      "dateSubmitted": "2026-10-06T15:40:29.227Z",
+      "score": 45,
+      "targetHours": 72,
+      "requestType": "MaintenanceRequest",
+      "building": "Teaching Block",
+      "roomNumber": "2",
+      "hazardLevel": "Medium",
+      "equipmentAffected": "Door handle"
+    },
+    {
+      "requestId": "REQ004",
+      "requester": "Taisen Marainump",
+      "requesterId": "250692",
+      "title": "Request event table setup",
+      "category": "General Campus Service",
+      "priority": "Low",
+      "status": "Submitted",
+      "campusLocation": "Student hall",
+      "technicianId": "Unassigned",
+      "dateSubmitted": "2026-10-06T15:40:29.227Z",
+      "score": 10,
+      "targetHours": 120,
+      "requestType": "GeneralServiceRequest"
+    }
+  ]
+}
+{
+  "report": "Operations and Performance",
+  "urgentRequests": [],
+  "overdueRequests": [],
+  "assignedByTechnician": {
+    "TECH001": 1
+  },
+  "completedByTechnician": {
+    "TECH001": 1
+  },
+  "averageResolutionHours": 0,
+  "volumeByLocation": {
+    "LAB 131": 1,
+    "Teaching Block Room 2": 1,
+    "Student washroom": 1,
+    "Student hall": 1
+  },
+  "note": "Targets are illustrative academic assumptions; no completed requests yields null average."
+}
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: ADM001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: ┌─────────┬────────────────────────────────────────┬───────────┬────────────────────────┬───────────────────────┬───────────┬───────────┬─────────────────────────────────────────┬────────────────────────────┬────────────┐
+│ (index) │ auditId                                │ actorId   │ actorRole              │ action                │ requestId │ userId    │ description                             │ timestamp                  │ outcome    │
+├─────────┼────────────────────────────────────────┼───────────┼────────────────────────┼───────────────────────┼───────────┼───────────┼─────────────────────────────────────────┼────────────────────────────┼────────────┤
+│ 0       │ '4acb7fff-0c1d-4d63-be7c-c82a582fbea2' │ '250692'  │ 'Student'              │ 'User Registered'     │ null      │ '250692'  │ 'Simulated user registration approved.' │ '2026-10-06T15:40:29.226Z' │ 'Approved' │
+│ 1       │ '94ab5984-43c2-4245-970b-e1f161929958' │ 'STF001'  │ 'Staff'                │ 'User Registered'     │ null      │ 'STF001'  │ 'Simulated user registration approved.' │ '2026-10-06T15:40:29.226Z' │ 'Approved' │
+│ 2       │ '9542c785-1a47-4ea7-b91f-edf217818f27' │ 'OFF001'  │ 'Service Officer'      │ 'User Registered'     │ null      │ 'OFF001'  │ 'Simulated user registration approved.' │ '2026-10-06T15:40:29.226Z' │ 'Approved' │
+│ 3       │ '54ae46e8-8614-4fc9-801a-375ab6e42ed5' │ 'TECH001' │ 'Technician'           │ 'User Registered'     │ null      │ 'TECH001' │ 'Simulated user registration approved.' │ '2026-10-06T15:40:29.226Z' │ 'Approved' │
+│ 4       │ '86023e3f-c3b9-4ea9-81ed-1ebd17ef4b48' │ 'TECH002' │ 'Technician'           │ 'User Registered'     │ null      │ 'TECH002' │ 'Simulated user registration approved.' │ '2026-10-06T15:40:29.226Z' │ 'Approved' │
+│ 5       │ '0b6390e1-77ed-4121-a03d-4960c021de84' │ 'ADM001'  │ 'System Administrator' │ 'User Registered'     │ null      │ 'ADM001'  │ 'Simulated user registration approved.' │ '2026-10-06T15:40:29.226Z' │ 'Approved' │
+│ 6       │ '586f65e0-02dd-4a97-b046-21bb35f11a68' │ '250692'  │ 'Student'              │ 'Request Created'     │ 'REQ001'  │ null      │ 'Request submitted.'                    │ '2026-10-06T15:40:29.226Z' │ 'Approved' │
+│ 7       │ '03b6baf9-290b-4a41-8663-3f5fe9f4fb8f' │ 'STF001'  │ 'Staff'                │ 'Request Created'     │ 'REQ002'  │ null      │ 'Request submitted.'                    │ '2026-10-06T15:40:29.227Z' │ 'Approved' │
+│ 8       │ '8a40f6a5-d0d9-46d4-940d-a2f6cae1e3fc' │ '250692'  │ 'Student'              │ 'Request Created'     │ 'REQ003'  │ null      │ 'Request submitted.'                    │ '2026-10-06T15:40:29.227Z' │ 'Approved' │
+│ 9       │ '64b8ddac-c978-4c27-a06f-29216c7e1863' │ '250692'  │ 'Student'              │ 'Request Created'     │ 'REQ004'  │ null      │ 'Request submitted.'                    │ '2026-10-06T15:40:29.227Z' │ 'Approved' │
+│ 10      │ '67421be8-f769-4d01-b041-bab94b3b8adb' │ 'OFF001'  │ 'Service Officer'      │ 'Reviewed'            │ 'REQ001'  │ null      │ 'Reviewed issue'                        │ '2026-10-06T15:40:29.242Z' │ 'Approved' │
+│ 11      │ 'e5cdc0cb-522b-4572-b0b3-8cf4e0422e78' │ 'OFF001'  │ 'Service Officer'      │ 'Priority Changed'    │ 'REQ001'  │ null      │ 'High → Urgent. Urgent network issue'   │ '2026-10-06T15:40:29.247Z' │ 'Approved' │
+│ 12      │ '77b14a52-5d57-46c4-8f6e-d9532154ca5f' │ 'OFF001'  │ 'Service Officer'      │ 'Technician Assigned' │ 'REQ001'  │ null      │ 'TECH001. Assigned to ICT'              │ '2026-10-06T15:40:29.252Z' │ 'Approved' │
+│ 13      │ '347dee84-af98-456d-95c9-6dd178838f91' │ 'TECH001' │ 'Technician'           │ 'Work Started'        │ 'REQ001'  │ null      │ 'Beginning inspection'                  │ '2026-10-06T15:40:29.255Z' │ 'Approved' │
+│ 14      │ '49ef9b7d-c4d3-46be-9b76-8f2f91ba3932' │ 'TECH001' │ 'Technician'           │ 'Progress Note'       │ 'REQ001'  │ null      │ 'Cable fault identified'                │ '2026-10-06T15:40:29.259Z' │ 'Approved' │
+│ 15      │ '7b45d8b0-9b1e-403e-abe1-c911a26486dd' │ 'TECH001' │ 'Technician'           │ 'Request Resolved'    │ 'REQ001'  │ null      │ 'Cable replaced and tested'             │ '2026-10-06T15:40:29.262Z' │ 'Approved' │
+│ 16      │ '6ea52b85-5f31-4cbf-9680-95f9d8099fac' │ 'OFF001'  │ 'Service Officer'      │ 'Request Closed'      │ 'REQ001'  │ null      │ 'Requester confirmed resolution'        │ '2026-10-06T15:40:29.266Z' │ 'Approved' │
+└─────────┴────────────────────────────────────────┴───────────┴────────────────────────┴───────────────────────┴───────────┴───────────┴─────────────────────────────────────────┴────────────────────────────┴────────────┘
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: ADM001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: {
+  "requestId": "REQ001",
+  "requester": "Taisen Marainump",
+  "requesterId": "250692",
+  "title": "Lab computer cannot access network",
+  "category": "ICT Support",
+  "priority": "Urgent",
+  "status": "Closed",
+  "campusLocation": "LAB 131",
+  "technicianId": "TECH001",
+  "dateSubmitted": "2026-10-06T15:40:29.226Z",
+  "score": 105,
+  "targetHours": 8,
+  "requestType": "ICTSupportRequest",
+  "deviceType": "Desktop",
+  "systemName": "Windows workstation",
+  "faultType": "No network connectivity",
+  "networkImpact": "Multiple Users"
+}
+Priority score: 105
+Target resolution hours: 8
+{
+  "requestId": "REQ002",
+  "requester": "Maria Kila",
+  "requesterId": "STF001",
+  "title": "Damaged classroom door handle",
+  "category": "Facilities Maintenance",
+  "priority": "Normal",
+  "status": "Submitted",
+  "campusLocation": "Teaching Block Room 2",
+  "technicianId": "Unassigned",
+  "dateSubmitted": "2026-10-06T15:40:29.227Z",
+  "score": 45,
+  "targetHours": 72,
+  "requestType": "MaintenanceRequest",
+  "building": "Teaching Block",
+  "roomNumber": "2",
+  "hazardLevel": "Medium",
+  "equipmentAffected": "Door handle"
+}
+Priority score: 45
+Target resolution hours: 72
+{
+  "requestId": "REQ003",
+  "requester": "Taisen Marainump",
+  "requesterId": "250692",
+  "title": "Clean washroom spill",
+  "category": "Cleaning and Sanitation",
+  "priority": "High",
+  "status": "Submitted",
+  "campusLocation": "Student washroom",
+  "technicianId": "Unassigned",
+  "dateSubmitted": "2026-10-06T15:40:29.227Z",
+  "score": 85,
+  "targetHours": 12,
+  "requestType": "CleaningRequest",
+  "cleaningArea": "Washroom floor",
+  "hygieneRisk": "High",
+  "serviceType": "Spill cleaning",
+  "preferredServiceTime": "As soon as available"
+}
+Priority score: 85
+Target resolution hours: 12
+{
+  "requestId": "REQ004",
+  "requester": "Taisen Marainump",
+  "requesterId": "250692",
+  "title": "Request event table setup",
+  "category": "General Campus Service",
+  "priority": "Low",
+  "status": "Submitted",
+  "campusLocation": "Student hall",
+  "technicianId": "Unassigned",
+  "dateSubmitted": "2026-10-06T15:40:29.227Z",
+  "score": 10,
+  "targetHours": 120,
+  "requestType": "GeneralServiceRequest"
+}
+Priority score: 10
+Target resolution hours: 120
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: ADM001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+20. Save JSON (administrator)
+21. Reload JSON (administrator)
+22. Management reports
+23. Audit history
+25. Polymorphic request demonstration
+Choose an option: Application closed.

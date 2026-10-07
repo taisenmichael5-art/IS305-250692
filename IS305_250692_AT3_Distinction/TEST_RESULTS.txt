@@ -1,0 +1,70 @@
+Detailed Distinction edition verification
+Runtime: v24.19.0
+Command: npm test
+
+
+> is305-250692-at3-distinction@1.0.0 test
+> node --test tests/*.test.js
+
+✔ Credit: all required user subclasses chain to User and expose specialised fields (4.458625ms)
+✔ Credit: invalid specialised user data rejected (2.756907ms)
+✔ Credit: all three specialised requests extend base and use distinct behaviour (0.632987ms)
+✔ Credit: specialised data validation and class/category mismatch rejected (7.811668ms)
+✔ Credit: full permitted lifecycle with all request-history fields (0.856595ms)
+✔ Credit: only Service Officer reviews, sets priority, assigns or closes (1.087163ms)
+✔ Credit: only assigned Technician starts, notes and resolves (1.598746ms)
+✔ Credit: invalid transitions cannot skip workflow stages (0.31775ms)
+✔ Credit: requester cannot update/cancel after review; cancellation is final (0.867301ms)
+✔ Credit: failed assignment and empty action comments do not change state (0.53615ms)
+✔ Credit: search/filter/sort support category, status, priority and technician (0.772368ms)
+✔ Credit: specialised summary/detail snapshots are defensive copies (0.280394ms)
+✔ Distinction: ServiceRequest abstract methods reject incomplete subclass (5.025366ms)
+✔ Distinction: one collection dispatches all required polymorphic methods (1.857178ms)
+✔ Distinction: four report implementations work in the same loop (1.584395ms)
+✔ Distinction: status/category/priority/location counts reconcile (2.462642ms)
+✔ Distinction: urgent, overdue, assigned and completed reports calculate correctly (0.790325ms)
+✔ Distinction: resolved duration is stable at later reporting times (0.436931ms)
+✔ Distinction: audit includes registrations and all approved lifecycle actions (10.173919ms)
+✔ Distinction: denied actions do not append audit and defensive copies protect it (0.679508ms)
+✔ Distinction: four named files save plain arrays with separate histories (21.13751ms)
+✔ Distinction: loading restores all three subclasses, users and shared references (7.383751ms)
+✔ Distinction: restored Assigned object supports continued approved workflow (15.883509ms)
+✔ Distinction: explicit factory rehydrates polymorphic request behaviour (0.408137ms)
+✔ Distinction: missing, zero-byte, whitespace and empty arrays yield empty collections (2.710367ms)
+✔ Distinction: repositories create/find/update and reject duplicate identifiers (3.576676ms)
+✔ Distinction: request repository supports requester and technician queries (7.447648ms)
+✔ Distinction: invalid records and credentials are rejected before disk changes (1.556763ms)
+✔ Distinction: corrupt JSON yields clear read error and preserves file (2.2566ms)
+✔ Distinction: file-reading errors report the affected filename (1.304722ms)
+✔ Distinction: four-file save rollback preserves every original file (10.988404ms)
+✔ Distinction: interrupted save journal restores the prior complete dataset (9.966726ms)
+✔ Distinction: invalid references, duplicate IDs and inconsistent audits reject loading (15.71834ms)
+✔ Distinction: forged workflow history or audit actor is rejected (0.774691ms)
+✔ Distinction: Pass/Credit managers cannot save and normal application data stays untouched (0.954703ms)
+✔ Console: Pass full core workflow and Credit lifecycle remain functional (147.617203ms)
+✔ Console: Distinction saves, restarts, reloads, reports and shows full audit (235.509212ms)
+✔ Console: invalid startup data exits clearly without overwriting it (69.077269ms)
+✔ Distinction: actual repository write error leaves target intact and removes temp files (3.946616ms)
+✔ Pass: valid registration and duplicate ID rejection, including case (3.12887ms)
+✔ Pass: missing ID, names, malformed email and unsupported role rejected (0.35018ms)
+✔ Pass: controlled User setters preserve valid data on rejection (0.235306ms)
+✔ Pass: valid request defaults Submitted; arrays retain actual objects (1.057598ms)
+✔ Pass: duplicate request IDs rejected before collection changes (0.593116ms)
+✔ Pass: invalid title, description, location, category, priority rejected (0.493476ms)
+✔ Pass: requester must be original registered object (0.405353ms)
+✔ Pass: own records are scoped to selected requester (0.522169ms)
+✔ Pass: own Submitted update works; another user rejected unchanged (1.346936ms)
+✔ Pass: multi-field validation is atomic; unsupported fields rejected (0.450421ms)
+✔ Pass: only owner may cancel Submitted request; cancellation final (0.474377ms)
+✔ Pass: search by partial ID and title; missing IDs rejected (0.35094ms)
+✔ Pass: collection and history copies cannot change internal arrays (0.260474ms)
+✔ Pass: status counts reconcile to total and advanced actions disabled (0.42332ms)
+ℹ tests 53
+ℹ suites 0
+ℹ pass 53
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 678.331697
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.

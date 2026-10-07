@@ -1,0 +1,189 @@
+[
+  {
+    "auditId": "4acb7fff-0c1d-4d63-be7c-c82a582fbea2",
+    "actorId": "250692",
+    "actorRole": "Student",
+    "action": "User Registered",
+    "requestId": null,
+    "userId": "250692",
+    "description": "Simulated user registration approved.",
+    "timestamp": "2026-10-06T15:40:29.226Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "94ab5984-43c2-4245-970b-e1f161929958",
+    "actorId": "STF001",
+    "actorRole": "Staff",
+    "action": "User Registered",
+    "requestId": null,
+    "userId": "STF001",
+    "description": "Simulated user registration approved.",
+    "timestamp": "2026-10-06T15:40:29.226Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "9542c785-1a47-4ea7-b91f-edf217818f27",
+    "actorId": "OFF001",
+    "actorRole": "Service Officer",
+    "action": "User Registered",
+    "requestId": null,
+    "userId": "OFF001",
+    "description": "Simulated user registration approved.",
+    "timestamp": "2026-10-06T15:40:29.226Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "54ae46e8-8614-4fc9-801a-375ab6e42ed5",
+    "actorId": "TECH001",
+    "actorRole": "Technician",
+    "action": "User Registered",
+    "requestId": null,
+    "userId": "TECH001",
+    "description": "Simulated user registration approved.",
+    "timestamp": "2026-10-06T15:40:29.226Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "86023e3f-c3b9-4ea9-81ed-1ebd17ef4b48",
+    "actorId": "TECH002",
+    "actorRole": "Technician",
+    "action": "User Registered",
+    "requestId": null,
+    "userId": "TECH002",
+    "description": "Simulated user registration approved.",
+    "timestamp": "2026-10-06T15:40:29.226Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "0b6390e1-77ed-4121-a03d-4960c021de84",
+    "actorId": "ADM001",
+    "actorRole": "System Administrator",
+    "action": "User Registered",
+    "requestId": null,
+    "userId": "ADM001",
+    "description": "Simulated user registration approved.",
+    "timestamp": "2026-10-06T15:40:29.226Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "586f65e0-02dd-4a97-b046-21bb35f11a68",
+    "actorId": "250692",
+    "actorRole": "Student",
+    "action": "Request Created",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "Request submitted.",
+    "timestamp": "2026-10-06T15:40:29.226Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "03b6baf9-290b-4a41-8663-3f5fe9f4fb8f",
+    "actorId": "STF001",
+    "actorRole": "Staff",
+    "action": "Request Created",
+    "requestId": "REQ002",
+    "userId": null,
+    "description": "Request submitted.",
+    "timestamp": "2026-10-06T15:40:29.227Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "8a40f6a5-d0d9-46d4-940d-a2f6cae1e3fc",
+    "actorId": "250692",
+    "actorRole": "Student",
+    "action": "Request Created",
+    "requestId": "REQ003",
+    "userId": null,
+    "description": "Request submitted.",
+    "timestamp": "2026-10-06T15:40:29.227Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "64b8ddac-c978-4c27-a06f-29216c7e1863",
+    "actorId": "250692",
+    "actorRole": "Student",
+    "action": "Request Created",
+    "requestId": "REQ004",
+    "userId": null,
+    "description": "Request submitted.",
+    "timestamp": "2026-10-06T15:40:29.227Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "67421be8-f769-4d01-b041-bab94b3b8adb",
+    "actorId": "OFF001",
+    "actorRole": "Service Officer",
+    "action": "Reviewed",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "Reviewed issue",
+    "timestamp": "2026-10-06T15:40:29.242Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "e5cdc0cb-522b-4572-b0b3-8cf4e0422e78",
+    "actorId": "OFF001",
+    "actorRole": "Service Officer",
+    "action": "Priority Changed",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "High → Urgent. Urgent network issue",
+    "timestamp": "2026-10-06T15:40:29.247Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "77b14a52-5d57-46c4-8f6e-d9532154ca5f",
+    "actorId": "OFF001",
+    "actorRole": "Service Officer",
+    "action": "Technician Assigned",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "TECH001. Assigned to ICT",
+    "timestamp": "2026-10-06T15:40:29.252Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "347dee84-af98-456d-95c9-6dd178838f91",
+    "actorId": "TECH001",
+    "actorRole": "Technician",
+    "action": "Work Started",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "Beginning inspection",
+    "timestamp": "2026-10-06T15:40:29.255Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "49ef9b7d-c4d3-46be-9b76-8f2f91ba3932",
+    "actorId": "TECH001",
+    "actorRole": "Technician",
+    "action": "Progress Note",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "Cable fault identified",
+    "timestamp": "2026-10-06T15:40:29.259Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "7b45d8b0-9b1e-403e-abe1-c911a26486dd",
+    "actorId": "TECH001",
+    "actorRole": "Technician",
+    "action": "Request Resolved",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "Cable replaced and tested",
+    "timestamp": "2026-10-06T15:40:29.262Z",
+    "outcome": "Approved"
+  },
+  {
+    "auditId": "6ea52b85-5f31-4cbf-9680-95f9d8099fac",
+    "actorId": "OFF001",
+    "actorRole": "Service Officer",
+    "action": "Request Closed",
+    "requestId": "REQ001",
+    "userId": null,
+    "description": "Requester confirmed resolution",
+    "timestamp": "2026-10-06T15:40:29.266Z",
+    "outcome": "Approved"
+  }
+]

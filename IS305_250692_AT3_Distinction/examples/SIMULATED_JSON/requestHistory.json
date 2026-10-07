@@ -1,0 +1,121 @@
+[
+  {
+    "requestId": "REQ001",
+    "history": [
+      {
+        "previousStatus": null,
+        "newStatus": "Submitted",
+        "action": "Submitted",
+        "actorId": "250692",
+        "actorRole": "Student",
+        "comment": "Request submitted.",
+        "timestamp": "2026-10-06T15:40:29.226Z"
+      },
+      {
+        "previousStatus": "Submitted",
+        "newStatus": "Reviewed",
+        "action": "Reviewed",
+        "actorId": "OFF001",
+        "actorRole": "Service Officer",
+        "comment": "Reviewed issue",
+        "timestamp": "2026-10-06T15:40:29.242Z"
+      },
+      {
+        "previousStatus": "Reviewed",
+        "newStatus": "Reviewed",
+        "action": "Priority Set",
+        "actorId": "OFF001",
+        "actorRole": "Service Officer",
+        "comment": "High → Urgent. Urgent network issue",
+        "timestamp": "2026-10-06T15:40:29.247Z"
+      },
+      {
+        "previousStatus": "Reviewed",
+        "newStatus": "Assigned",
+        "action": "Assigned",
+        "actorId": "OFF001",
+        "actorRole": "Service Officer",
+        "comment": "TECH001. Assigned to ICT",
+        "timestamp": "2026-10-06T15:40:29.252Z"
+      },
+      {
+        "previousStatus": "Assigned",
+        "newStatus": "In Progress",
+        "action": "Work Started",
+        "actorId": "TECH001",
+        "actorRole": "Technician",
+        "comment": "Beginning inspection",
+        "timestamp": "2026-10-06T15:40:29.255Z"
+      },
+      {
+        "previousStatus": "In Progress",
+        "newStatus": "In Progress",
+        "action": "Progress Note",
+        "actorId": "TECH001",
+        "actorRole": "Technician",
+        "comment": "Cable fault identified",
+        "timestamp": "2026-10-06T15:40:29.259Z"
+      },
+      {
+        "previousStatus": "In Progress",
+        "newStatus": "Resolved",
+        "action": "Resolved",
+        "actorId": "TECH001",
+        "actorRole": "Technician",
+        "comment": "Cable replaced and tested",
+        "timestamp": "2026-10-06T15:40:29.262Z"
+      },
+      {
+        "previousStatus": "Resolved",
+        "newStatus": "Closed",
+        "action": "Verified and Closed",
+        "actorId": "OFF001",
+        "actorRole": "Service Officer",
+        "comment": "Requester confirmed resolution",
+        "timestamp": "2026-10-06T15:40:29.266Z"
+      }
+    ]
+  },
+  {
+    "requestId": "REQ002",
+    "history": [
+      {
+        "previousStatus": null,
+        "newStatus": "Submitted",
+        "action": "Submitted",
+        "actorId": "STF001",
+        "actorRole": "Staff",
+        "comment": "Request submitted.",
+        "timestamp": "2026-10-06T15:40:29.227Z"
+      }
+    ]
+  },
+  {
+    "requestId": "REQ003",
+    "history": [
+      {
+        "previousStatus": null,
+        "newStatus": "Submitted",
+        "action": "Submitted",
+        "actorId": "250692",
+        "actorRole": "Student",
+        "comment": "Request submitted.",
+        "timestamp": "2026-10-06T15:40:29.227Z"
+      }
+    ]
+  },
+  {
+    "requestId": "REQ004",
+    "history": [
+      {
+        "previousStatus": null,
+        "newStatus": "Submitted",
+        "action": "Submitted",
+        "actorId": "250692",
+        "actorRole": "Student",
+        "comment": "Request submitted.",
+        "timestamp": "2026-10-06T15:40:29.227Z"
+      }
+    ]
+  }
+]

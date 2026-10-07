@@ -1,0 +1,56 @@
+[
+  {
+    "className": "StudentRequester",
+    "userId": "250692",
+    "firstName": "Taisen",
+    "lastName": "Marainump",
+    "email": "taisen@example.test",
+    "userType": "Student",
+    "programme": "Bachelor of Information Systems",
+    "yearLevel": 3
+  },
+  {
+    "className": "StaffRequester",
+    "userId": "STF001",
+    "firstName": "Maria",
+    "lastName": "Kila",
+    "email": "maria@example.test",
+    "userType": "Staff",
+    "department": "Information Systems"
+  },
+  {
+    "className": "ServiceOfficer",
+    "userId": "OFF001",
+    "firstName": "Peter",
+    "lastName": "Wari",
+    "email": "officer@example.test",
+    "userType": "Service Officer",
+    "serviceSection": "Campus Services"
+  },
+  {
+    "className": "Technician",
+    "userId": "TECH001",
+    "firstName": "Anna",
+    "lastName": "Malo",
+    "email": "ict@example.test",
+    "userType": "Technician",
+    "technicalSpeciality": "ICT Support"
+  },
+  {
+    "className": "Technician",
+    "userId": "TECH002",
+    "firstName": "John",
+    "lastName": "Kora",
+    "email": "maintenance@example.test",
+    "userType": "Technician",
+    "technicalSpeciality": "Facilities and Cleaning"
+  },
+  {
+    "className": "SystemAdministrator",
+    "userId": "ADM001",
+    "firstName": "Lucy",
+    "lastName": "Tari",
+    "email": "admin@example.test",
+    "userType": "System Administrator"
+  }
+]

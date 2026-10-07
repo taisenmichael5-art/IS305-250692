@@ -1,0 +1,31 @@
+
+CAMPUS SERVICE REQUEST SYSTEM — DISTINCTION DEMONSTRATION
+┌─────────┬──────────┬───────────────────────────┬──────────┬─────────────┬───────┬─────────────┐
+│ (index) │ ID       │ Category                  │ Priority │ Status      │ Score │ TargetHours │
+├─────────┼──────────┼───────────────────────────┼──────────┼─────────────┼───────┼─────────────┤
+│ 0       │ 'REQ001' │ 'ICT Support'             │ 'High'   │ 'Submitted' │ 75    │ 24          │
+│ 1       │ 'REQ002' │ 'Facilities Maintenance'  │ 'Normal' │ 'Submitted' │ 45    │ 72          │
+│ 2       │ 'REQ003' │ 'Cleaning and Sanitation' │ 'High'   │ 'Submitted' │ 85    │ 12          │
+│ 3       │ 'REQ004' │ 'General Campus Service'  │ 'Low'    │ 'Submitted' │ 10    │ 120         │
+└─────────┴──────────┴───────────────────────────┴──────────┴─────────────┴───────┴─────────────┘
+┌─────────┬────────────────┬───────────────┬───────────────────────┬───────────┬───────────────────┬────────────────────────────────────────────────────────┬────────────────────────────┐
+│ (index) │ previousStatus │ newStatus     │ action                │ actorId   │ actorRole         │ comment                                                │ timestamp                  │
+├─────────┼────────────────┼───────────────┼───────────────────────┼───────────┼───────────────────┼────────────────────────────────────────────────────────┼────────────────────────────┤
+│ 0       │ null           │ 'Submitted'   │ 'Submitted'           │ '250692'  │ 'Student'         │ 'Request submitted.'                                   │ '2026-10-06T15:40:29.164Z' │
+│ 1       │ 'Submitted'    │ 'Reviewed'    │ 'Reviewed'            │ 'OFF001'  │ 'Service Officer' │ 'Network issue verified.'                              │ '2026-10-06T15:40:29.166Z' │
+│ 2       │ 'Reviewed'     │ 'Reviewed'    │ 'Priority Set'        │ 'OFF001'  │ 'Service Officer' │ 'High → Urgent. Priority reviewed by Service Officer.' │ '2026-10-06T15:40:29.166Z' │
+│ 3       │ 'Reviewed'     │ 'Assigned'    │ 'Assigned'            │ 'OFF001'  │ 'Service Officer' │ 'TECH001. Technician assigned.'                        │ '2026-10-06T15:40:29.166Z' │
+│ 4       │ 'Assigned'     │ 'In Progress' │ 'Work Started'        │ 'TECH001' │ 'Technician'      │ 'Work started.'                                        │ '2026-10-06T15:40:29.166Z' │
+│ 5       │ 'In Progress'  │ 'In Progress' │ 'Progress Note'       │ 'TECH001' │ 'Technician'      │ 'Switch connection checked.'                           │ '2026-10-06T15:40:29.166Z' │
+│ 6       │ 'In Progress'  │ 'Resolved'    │ 'Resolved'            │ 'TECH001' │ 'Technician'      │ 'Restored switch connection; workstation tested.'      │ '2026-10-06T15:40:29.166Z' │
+│ 7       │ 'Resolved'     │ 'Closed'      │ 'Verified and Closed' │ 'OFF001'  │ 'Service Officer' │ 'Requester confirmed that network access works.'       │ '2026-10-06T15:40:29.166Z' │
+└─────────┴────────────────┴───────────────┴───────────────────────┴───────────┴───────────────────┴────────────────────────────────────────────────────────┴────────────────────────────┘
+Status summary: {
+  Submitted: 2,
+  Reviewed: 0,
+  Assigned: 0,
+  'In Progress': 0,
+  Resolved: 0,
+  Closed: 1,
+  Cancelled: 1
+}
