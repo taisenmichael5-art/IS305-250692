@@ -1,0 +1,40 @@
+Credit checkpoint: npm test
+
+> is305-250692-at3-credit@1.0.0 test
+> node --test tests/pass.test.js tests/credit.test.js
+
+✔ Credit: all required user subclasses chain to User and expose specialised fields (2.404575ms)
+✔ Credit: invalid specialised user data rejected (0.335327ms)
+✔ Credit: all three specialised requests extend base and use distinct behaviour (0.836725ms)
+✔ Credit: specialised data validation and class/category mismatch rejected (0.629462ms)
+✔ Credit: full permitted lifecycle with all request-history fields (0.726008ms)
+✔ Credit: only Service Officer reviews, sets priority, assigns or closes (0.342928ms)
+✔ Credit: only assigned Technician starts, notes and resolves (0.885709ms)
+✔ Credit: invalid transitions cannot skip workflow stages (0.248817ms)
+✔ Credit: requester cannot update/cancel after review; cancellation is final (0.570602ms)
+✔ Credit: failed assignment and empty action comments do not change state (0.449109ms)
+✔ Credit: search/filter/sort support category, status, priority and technician (1.333636ms)
+✔ Credit: specialised summary/detail snapshots are defensive copies (0.187023ms)
+✔ Pass: valid registration and duplicate ID rejection, including case (2.025522ms)
+✔ Pass: missing ID, names, malformed email and unsupported role rejected (0.698947ms)
+✔ Pass: controlled User setters preserve valid data on rejection (0.184288ms)
+✔ Pass: valid request defaults Submitted; arrays retain actual objects (1.081255ms)
+✔ Pass: duplicate request IDs rejected before collection changes (0.322437ms)
+✔ Pass: invalid title, description, location, category, priority rejected (3.687996ms)
+✔ Pass: requester must be original registered object (0.26456ms)
+✔ Pass: own records are scoped to selected requester (0.428308ms)
+✔ Pass: own Submitted update works; another user rejected unchanged (2.077551ms)
+✔ Pass: multi-field validation is atomic; unsupported fields rejected (0.50315ms)
+✔ Pass: only owner may cancel Submitted request; cancellation final (0.373495ms)
+✔ Pass: search by partial ID and title; missing IDs rejected (0.358913ms)
+✔ Pass: collection and history copies cannot change internal arrays (0.174374ms)
+✔ Pass: status counts reconcile to total and advanced actions disabled (0.2511ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 134.825388
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.

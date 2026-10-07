@@ -1,0 +1,363 @@
+Demo IDs: 250692, STF001, OFF001, TECH001, TECH002, ADM001. Select option 11 to switch.
+Campus Service Request System | Taisen Marainump 250692
+Mode: credit. Role selection is an academic simulation, not password authentication.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: No user selected
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: ┌─────────┬───────────┬────────────────────┬────────────────────────┐
+│ (index) │ ID        │ Name               │ Role                   │
+├─────────┼───────────┼────────────────────┼────────────────────────┤
+│ 0       │ '250692'  │ 'Taisen Marainump' │ 'Student'              │
+│ 1       │ 'STF001'  │ 'Maria Kila'       │ 'Staff'                │
+│ 2       │ 'OFF001'  │ 'Peter Wari'       │ 'Service Officer'      │
+│ 3       │ 'TECH001' │ 'Anna Malo'        │ 'Technician'           │
+│ 4       │ 'TECH002' │ 'John Kora'        │ 'Technician'           │
+│ 5       │ 'ADM001'  │ 'Lucy Tari'        │ 'System Administrator' │
+└─────────┴───────────┴────────────────────┴────────────────────────┘
+Switch to user ID: Active user: OFF001 | Peter Wari | Service Officer | officer@example.test | Section: Campus Services
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: Review comment: Action accepted. Status: Reviewed
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: 1. Low
+2. Normal
+3. High
+4. Urgent
+Priority: Priority comment: Action accepted. Status: Reviewed
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: ┌─────────┬───────────┬─────────────┬───────────────────────────┐
+│ (index) │ ID        │ Name        │ Speciality                │
+├─────────┼───────────┼─────────────┼───────────────────────────┤
+│ 0       │ 'TECH001' │ 'Anna Malo' │ 'ICT Support'             │
+│ 1       │ 'TECH002' │ 'John Kora' │ 'Facilities and Cleaning' │
+└─────────┴───────────┴─────────────┴───────────────────────────┘
+Technician ID: Assignment comment: Action accepted. Status: Assigned
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: ┌─────────┬───────────┬────────────────────┬────────────────────────┐
+│ (index) │ ID        │ Name               │ Role                   │
+├─────────┼───────────┼────────────────────┼────────────────────────┤
+│ 0       │ '250692'  │ 'Taisen Marainump' │ 'Student'              │
+│ 1       │ 'STF001'  │ 'Maria Kila'       │ 'Staff'                │
+│ 2       │ 'OFF001'  │ 'Peter Wari'       │ 'Service Officer'      │
+│ 3       │ 'TECH001' │ 'Anna Malo'        │ 'Technician'           │
+│ 4       │ 'TECH002' │ 'John Kora'        │ 'Technician'           │
+│ 5       │ 'ADM001'  │ 'Lucy Tari'        │ 'System Administrator' │
+└─────────┴───────────┴────────────────────┴────────────────────────┘
+Switch to user ID: Active user: TECH001 | Anna Malo | Technician | ict@example.test | Speciality: ICT Support
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: Start-work comment: Action accepted. Status: In Progress
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: Progress note: Action accepted. Status: In Progress
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: Resolution comment: Action accepted. Status: Resolved
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: TECH001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: ┌─────────┬───────────┬────────────────────┬────────────────────────┐
+│ (index) │ ID        │ Name               │ Role                   │
+├─────────┼───────────┼────────────────────┼────────────────────────┤
+│ 0       │ '250692'  │ 'Taisen Marainump' │ 'Student'              │
+│ 1       │ 'STF001'  │ 'Maria Kila'       │ 'Staff'                │
+│ 2       │ 'OFF001'  │ 'Peter Wari'       │ 'Service Officer'      │
+│ 3       │ 'TECH001' │ 'Anna Malo'        │ 'Technician'           │
+│ 4       │ 'TECH002' │ 'John Kora'        │ 'Technician'           │
+│ 5       │ 'ADM001'  │ 'Lucy Tari'        │ 'System Administrator' │
+└─────────┴───────────┴────────────────────┴────────────────────────┘
+Switch to user ID: Active user: OFF001 | Peter Wari | Service Officer | officer@example.test | Section: Campus Services
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: Verification comment: Action accepted. Status: Closed
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Request ID: {
+  "requestId": "REQ001",
+  "requester": "Taisen Marainump",
+  "requesterId": "250692",
+  "title": "Lab computer cannot access network",
+  "category": "ICT Support",
+  "priority": "Urgent",
+  "status": "Closed",
+  "campusLocation": "LAB 131",
+  "technicianId": "TECH001",
+  "dateSubmitted": "2026-10-06T15:28:03.956Z",
+  "score": 105,
+  "targetHours": 8,
+  "requestType": "ICTSupportRequest",
+  "deviceType": "Desktop",
+  "systemName": "Windows workstation",
+  "faultType": "No network connectivity",
+  "networkImpact": "Multiple Users",
+  "description": "Network unavailable on lab workstation.",
+  "dateUpdated": "2026-10-06T15:28:03.966Z"
+}
+┌─────────┬────────────────┬───────────────┬───────────────────────┬───────────┬───────────────────┬──────────────────────────────────┬────────────────────────────┐
+│ (index) │ previousStatus │ newStatus     │ action                │ actorId   │ actorRole         │ comment                          │ timestamp                  │
+├─────────┼────────────────┼───────────────┼───────────────────────┼───────────┼───────────────────┼──────────────────────────────────┼────────────────────────────┤
+│ 0       │ null           │ 'Submitted'   │ 'Submitted'           │ '250692'  │ 'Student'         │ 'Request submitted.'             │ '2026-10-06T15:28:03.957Z' │
+│ 1       │ 'Submitted'    │ 'Reviewed'    │ 'Reviewed'            │ 'OFF001'  │ 'Service Officer' │ 'Verified issue'                 │ '2026-10-06T15:28:03.963Z' │
+│ 2       │ 'Reviewed'     │ 'Reviewed'    │ 'Priority Set'        │ 'OFF001'  │ 'Service Officer' │ 'High → Urgent. Urgent verified' │ '2026-10-06T15:28:03.963Z' │
+│ 3       │ 'Reviewed'     │ 'Assigned'    │ 'Assigned'            │ 'OFF001'  │ 'Service Officer' │ 'TECH001. Assigned'              │ '2026-10-06T15:28:03.964Z' │
+│ 4       │ 'Assigned'     │ 'In Progress' │ 'Work Started'        │ 'TECH001' │ 'Technician'      │ 'Starting repair'                │ '2026-10-06T15:28:03.965Z' │
+│ 5       │ 'In Progress'  │ 'In Progress' │ 'Progress Note'       │ 'TECH001' │ 'Technician'      │ 'Inspected cable'                │ '2026-10-06T15:28:03.965Z' │
+│ 6       │ 'In Progress'  │ 'Resolved'    │ 'Resolved'            │ 'TECH001' │ 'Technician'      │ 'Replaced cable'                 │ '2026-10-06T15:28:03.966Z' │
+│ 7       │ 'Resolved'     │ 'Closed'      │ 'Verified and Closed' │ 'OFF001'  │ 'Service Officer' │ 'Verified with requester'        │ '2026-10-06T15:28:03.966Z' │
+└─────────┴────────────────┴───────────────┴───────────────────────┴───────────┴───────────────────┴──────────────────────────────────┴────────────────────────────┘
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: OFF001
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+12. Review request
+13. Set priority
+14. Assign Technician
+15. Begin work
+16. Add progress note
+17. Resolve request
+18. Verify and close
+19. Filter and sort
+24. Review user records
+Choose an option: Application closed.
