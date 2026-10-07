@@ -1,0 +1,75 @@
+
+========================================
+       LAB 2 PART 2 REQUIRED TESTS
+========================================
+
+TEST 1 - VALID STUDENT OBJECT
+PASS: Student accepted.
+========================================
+          STUDENT INFORMATION
+========================================
+Student ID:   DWU2026001
+Student Name: Maria Kila
+========================================
+
+TEST 2 - INVALID STUDENT INFORMATION
+PASS: Invalid student rejected.
+Error: Student ID cannot be empty.
+
+TEST 3 - STUDENT AND BOOKING INTEGRATION
+PASS: MealBooking uses connected Student object.
+Student:       Maria Kila (DWU2026001)
+Meal date:     12 August 2026
+Meal type:     Lunch
+Quantity:      2
+Dietary note:  No peanuts
+Status:        Confirmed
+Payment:       Successful
+Total cost:    K30.00
+
+DUPLICATE BOOKING CHECK
+PASS: Duplicate booking rejected.
+Error: Duplicate booking rejected: DWU2026001 already has Lunch on 12 August 2026.
+
+TEST 4 - UPDATED STUDENT NAME
+Before update: Maria Kila
+After update:  Mary Kila-Smith
+Existing booking summary:
+Student:       Mary Kila-Smith (DWU2026001)
+Meal date:     12 August 2026
+Meal type:     Lunch
+Quantity:      2
+Dietary note:  No peanuts
+Status:        Confirmed
+Payment:       Successful
+Total cost:    K30.00
+PASS: Existing booking reflects updated Student object.
+
+TEST 5 - BOOKING HISTORY
+
+========================================
+          STUDENT INFORMATION
+========================================
+Student ID:   DWU2026001
+Student Name: Mary Kila-Smith
+========================================
+
+========================================
+            BOOKING HISTORY
+========================================
+1. Lunch - 12 August 2026
+   Quantity: 2
+   Dietary note: No peanuts
+   Status: Confirmed
+   Cost: K30.00
+
+2. Dinner - 13 August 2026
+   Quantity: 1
+   Dietary note: None
+   Status: Pending
+   Cost: K20.00
+
+Total Bookings: 2
+Combined Cost: K50.00
+========================================
+PASS: All student bookings displayed.

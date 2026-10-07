@@ -1,0 +1,93 @@
+
+=== CREDIT ACCOUNT — EXACT LIMIT DEMONSTRATION ===
+Payment successful. Resulting Balance: K-500.00
+Payment rejected: credit limit K500.00 would be exceeded. Insufficient funds: available K0.00, required K1.00.
+
+=== POLYMORPHIC ACCOUNT PROCESSING ===
+Account Number: POLY-D
+Account Type: Standard Dining Account
+Current Balance: K100.00
+Account Number: POLY-R
+Account Type: Rewards Dining Account
+Current Balance: K100.00
+Reward Rate: 2.5%
+Account Number: CA001
+Account Type: Credit Dining Account
+Current Balance: K-500.00
+Credit Limit: K500.00
+
+=== SIMULATED OVERLOADING ===
+Account Number: DA001
+Account Type: Standard Dining Account
+Current Balance: K200.00
+Account Number: DA002
+Account Type: Standard Dining Account
+Current Balance: K500.00
+
+=== STUDENT DINING ACCOUNT ===
+Student: Maria Kila
+Student ID: DWU2026001
+Account Type: RewardsDiningAccount
+Account Number: RA001
+Opening Balance: K100.00
+
+=== MEAL BOOKING ===
+Meal: Dinner
+Quantity: 2
+Total Cost: K40.00
+Payment Status: Successful
+Booking Status: Confirmed
+Remaining Balance: K60.00
+Payment rejected: this booking has already been paid or confirmed.
+
+=== TRANSACTION HISTORY ===
+1. Opening Balance — K100.00
+   Signed amount: K100.00
+   Description: Opening balance
+   Date and time: 2026-10-06T14:11:21.582Z
+   Balance: K100.00
+2. Meal Payment — K40.00
+   Signed amount: K-40.00
+   Description: Dinner booking on 2026-10-07
+   Date and time: 2026-10-06T14:11:21.582Z
+   Balance: K60.00
+Total Transactions: 2
+
+=== PENDING PAYMENT AND FUNDED RETRY ===
+Payment rejected: Insufficient funds: available K0.00, required K30.00.
+Booking Status: Pending
+Payment successful
+Student:       Taisen Marainump (250692)
+Meal date:     2026-10-07
+Meal type:     Lunch
+Quantity:      2
+Dietary note:  None
+Status:        Confirmed
+Payment:       Successful
+Total cost:    K30.00
+
+=== TRANSACTION HISTORY ===
+1. Deposit — K100.00
+   Signed amount: K100.00
+   Description: Weekly meal allowance
+   Date and time: 2026-10-06T14:11:21.582Z
+   Balance: K100.00
+2. Meal Payment — K30.00
+   Signed amount: K-30.00
+   Description: Lunch booking on 2026-10-07
+   Date and time: 2026-10-06T14:11:21.582Z
+   Balance: K70.00
+Total Transactions: 2
+
+=== TRANSACTION HISTORY ===
+1. Opening Balance — K1000.00
+   Signed amount: K1000.00
+   Description: Opening balance
+   Date and time: 2026-10-06T14:11:21.581Z
+   Balance: K1000.00
+2. Meal Payment — K1500.00
+   Signed amount: K-1500.00
+   Description: Catering payment
+   Date and time: 2026-10-06T14:11:21.581Z
+   Balance: K-500.00
+Total Transactions: 2

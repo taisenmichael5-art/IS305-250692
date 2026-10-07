@@ -1,0 +1,20 @@
+✔ required standard demonstration finishes at K1300 (1.7668ms)
+✔ constructor default gives zero balance and account number validates (0.555029ms)
+✔ deposit overload defaults and custom description both recorded (0.215295ms)
+✔ rejected payment leaves balance and history unchanged; exact balance accepted (0.991798ms)
+✔ invalid amounts and descriptions cannot mutate state (0.330159ms)
+✔ history copies protect stored transactions (0.149536ms)
+✔ rewards formula and application match K50 and K2050 exactly (0.540707ms)
+✔ deposits do not automatically earn rewards (0.167543ms)
+✔ reward rates validated; zero reward produces no invalid zero deposit (0.343659ms)
+✔ repeat explicit reward uses new current balance as required by formula (0.295657ms)
+✔ integer-toea arithmetic and reward rounding (0.224009ms)
+✔ summary uses overridden account type and includes rate (0.214575ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.622629

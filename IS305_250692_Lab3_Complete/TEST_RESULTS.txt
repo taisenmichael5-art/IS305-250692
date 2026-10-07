@@ -1,0 +1,43 @@
+✔ required credit boundary K1500 accepted; next payment rejected unchanged (2.626589ms)
+✔ credit amount exceeding available funds is rejected; deposits repay debt (0.253332ms)
+✔ credit limit validation and zero-limit policy (0.166902ms)
+✔ Student assignment validates types and permits all account subclasses (0.331491ms)
+✔ same polymorphic payment call confirms booking for each account subtype (0.763113ms)
+✔ insufficient standard balance keeps booking Pending and history unchanged (0.44333ms)
+✔ failed booking can be paid after depositing; duplicate attempts never charge again (0.406504ms)
+✔ booking payment rejects invalid account and another student account (0.171319ms)
+✔ retained confirmBooking method enforces payment; no unpaid confirmation bypass (0.434807ms)
+✔ cancelled booking cannot pay; paid cancellation retains payment and prevents recharge (0.399493ms)
+✔ paid details cannot change; invalid pending edits restore earlier state (0.630502ms)
+✔ actual Lab 2 shared Student references reflect name updates (0.16566ms)
+✔ required transaction fields are recorded with signed debit (0.203537ms)
+✔ same account-summary loop uses correct subtype method (0.450411ms)
+✔ app duplicate booking validation happens before another debit (0.441217ms)
+✔ app keeps failed booking Pending in the original bookings collection (0.195376ms)
+✔ app rejects duplicate student IDs and account numbers; collection copies safe (0.298712ms)
+✔ retained history function reports total count and combined cost (0.225961ms)
+✔ invalid Student/MealBooking inputs and original meal prices retained (0.186542ms)
+✔ actual CLI: required Maria dinner payment and final K60 (81.541602ms)
+✔ actual CLI: insufficient funds, deposit, retry same Pending booking (104.909782ms)
+✔ retained Lab 2 console tests run without FAIL results (88.562411ms)
+✔ boolean and malformed quantities rejected; numeric input strings retained (0.358311ms)
+✔ required standard demonstration finishes at K1300 (1.819089ms)
+✔ constructor default gives zero balance and account number validates (0.272281ms)
+✔ deposit overload defaults and custom description both recorded (0.543426ms)
+✔ rejected payment leaves balance and history unchanged; exact balance accepted (1.828913ms)
+✔ invalid amounts and descriptions cannot mutate state (0.660337ms)
+✔ history copies protect stored transactions (0.506396ms)
+✔ rewards formula and application match K50 and K2050 exactly (0.545284ms)
+✔ deposits do not automatically earn rewards (0.147142ms)
+✔ reward rates validated; zero reward produces no invalid zero deposit (0.288256ms)
+✔ repeat explicit reward uses new current balance as required by formula (0.457091ms)
+✔ integer-toea arithmetic and reward rounding (0.183467ms)
+✔ summary uses overridden account type and includes rate (0.173071ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 415.701498

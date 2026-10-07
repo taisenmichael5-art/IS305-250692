@@ -1,0 +1,19 @@
+{
+  "name": "campus-service-request-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CampusServiceApp.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

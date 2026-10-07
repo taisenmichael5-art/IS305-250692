@@ -1,0 +1,14 @@
+{
+  "name": "is305-250692-lab3-extension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Additive dining account extension for existing Lab 1 and Lab 2 classes",
+  "author": "Taisen Marainump (250692)",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "demo:part1": "node examples/part1.js",
+    "demo:part2": "node examples/part2.js"
+  },
+  "engines": { "node": ">=22" }
+}
