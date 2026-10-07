@@ -1,0 +1,81 @@
+Demo IDs: 250692, STF001, OFF001, TECH001, TECH002, ADM001. Select option 11 to switch.
+Campus Service Request System | Taisen Marainump 250692
+Mode: pass. Role selection is an academic simulation, not password authentication.
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: No user selected
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests (role scope)
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+Choose an option: ┌─────────┬──────────┬────────────────────┬───────────┐
+│ (index) │ ID       │ Name               │ Role      │
+├─────────┼──────────┼────────────────────┼───────────┤
+│ 0       │ '250692' │ 'Taisen Marainump' │ 'Student' │
+│ 1       │ 'STF001' │ 'Maria Kila'       │ 'Staff'   │
+└─────────┴──────────┴────────────────────┴───────────┘
+Switch to user ID: Active user: 250692 | Taisen Marainump | Student | taisen@example.test
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: 250692
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests (role scope)
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+Choose an option: ┌─────────┬──────────┬──────────────────────────────────────┬───────────────────────────┬──────────┬─────────────┬──────────────┐
+│ (index) │ ID       │ Title                                │ Category                  │ Priority │ Status      │ Technician   │
+├─────────┼──────────┼──────────────────────────────────────┼───────────────────────────┼──────────┼─────────────┼──────────────┤
+│ 0       │ 'REQ001' │ 'Lab computer cannot access network' │ 'ICT Support'             │ 'High'   │ 'Submitted' │ 'Unassigned' │
+│ 1       │ 'REQ002' │ 'Damaged classroom door handle'      │ 'Facilities Maintenance'  │ 'Normal' │ 'Submitted' │ 'Unassigned' │
+│ 2       │ 'REQ003' │ 'Clean washroom spill'               │ 'Cleaning and Sanitation' │ 'High'   │ 'Submitted' │ 'Unassigned' │
+│ 3       │ 'REQ004' │ 'Request event table setup'          │ 'General Campus Service'  │ 'Low'    │ 'Submitted' │ 'Unassigned' │
+└─────────┴──────────┴──────────────────────────────────────┴───────────────────────────┴──────────┴─────────────┴──────────────┘
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: 250692
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests (role scope)
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+Choose an option: ┌───────────┬────────┐
+│ (index)   │ Values │
+├───────────┼────────┤
+│ Submitted │ 4      │
+│ Cancelled │ 0      │
+└───────────┴────────┘
+
+=== CAMPUS SERVICE REQUEST SYSTEM ===
+Active: 250692
+1. Register User
+2. Submit Service Request
+3. View Request by ID
+4. View My Requests
+5. View All Requests (role scope)
+6. Update My Request
+7. Cancel My Request
+8. Search Requests
+9. View Request Summary
+10. Exit
+11. Switch simulated user
+Choose an option: Application closed.

@@ -1,0 +1,28 @@
+Pass checkpoint verification
+
+> is305-250692-at3-pass@1.0.0 test
+> node --test tests/pass.test.js
+
+✔ Pass: valid registration and duplicate ID rejection, including case (1.403083ms)
+✔ Pass: missing ID, names, malformed email and unsupported role rejected (0.208495ms)
+✔ Pass: controlled User setters preserve valid data on rejection (0.474508ms)
+✔ Pass: valid request defaults Submitted; arrays retain actual objects (1.05778ms)
+✔ Pass: duplicate request IDs rejected before collection changes (0.355919ms)
+✔ Pass: invalid title, description, location, category, priority rejected (0.312232ms)
+✔ Pass: requester must be original registered object (0.234926ms)
+✔ Pass: own records are scoped to selected requester (0.323159ms)
+✔ Pass: own Submitted update works; another user rejected unchanged (1.173555ms)
+✔ Pass: multi-field validation is atomic; unsupported fields rejected (0.338932ms)
+✔ Pass: only owner may cancel Submitted request; cancellation final (0.2644ms)
+✔ Pass: search by partial ID and title; missing IDs rejected (0.260704ms)
+✔ Pass: collection and history copies cannot change internal arrays (0.162837ms)
+✔ Pass: status counts reconcile to total and advanced actions disabled (0.265581ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 94.022779
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
